@@ -28,8 +28,8 @@ public class PeliculaController {
 
         model.addAttribute("conteo",peliculaService.conteoPeliculas());
 
-        model.addAttribute("listaPeliculasHorror",peliculaService.peliculaPorCategoria(11));
 
+        model.addAttribute("listaPeliculasHorror",peliculaService.peliculaPorCategoria(11));
         return "peliculas";
     }
 

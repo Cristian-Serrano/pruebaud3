@@ -69,7 +69,7 @@ public class PeliculaDAOImpl implements PeliculaDAO{
                             SELECT * FROM pelicula P 
                                 left join pelicula_categoria PC on PC.id_pelicula = P.id_pelicula
                                 left join categoria C on PC.id_categoria = C.id_categoria
-                                WHERE P.id_categoria = ?""",
+                                WHERE C.id_categoria = ?""",
                 (rs, rowNum) -> UtilDAO.newPelicula(rs),
                 idCategoria
         );
